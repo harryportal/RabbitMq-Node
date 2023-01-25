@@ -1,5 +1,5 @@
 import express, {Request,  Response} from 'express';
-import RabbitMq from './rabbitmq';
+import RabbitMq from './source/rabbitmq';
 
 const app = express();
 const PORT = process.env.PORT || 4002;
