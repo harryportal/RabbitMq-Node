@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  rabbitmq:
+    image: rabbitmq
+    container_name: "rabbitmq"
+    environment:
+      - "RABBITMQ_DEFAULT_PASS=password"
+      - "RABBITMQ_DEFAULT_USER=username"
+    ports:
+      - 5673:5672
+      - 15673:15672
+    networks:
+      - rabbitmq_net
+
+
+networks:
+  rabbitmq_net:
+      driver: bridge
